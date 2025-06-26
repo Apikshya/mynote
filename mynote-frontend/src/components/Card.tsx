@@ -25,7 +25,7 @@ export function Card({ _id, title, content, onDelete }: CardProps) {
       });
       onDelete(); //call refetch as the function is passed on trashIcon
 
-      // Test: show alert or trigger parent to refresh data 
+      // Test: show alert or trigger parent to refresh data
       // alert(title + " deleted !");
     } catch (err) {
       console.error("Error deleting note:", err);
@@ -33,25 +33,25 @@ export function Card({ _id, title, content, onDelete }: CardProps) {
   };
 
   return (
-    <div className={` ${color} cursor-pointer h-72 rounded-lg shadow-lg col-auto m-4 mt-10`}>
+    <div
+      className={` ${color} cursor-pointer h-72 rounded-lg shadow-lg col-auto m-4 mt-10`}
+    >
       <div className="p-2 ">
-        <div className="p-1">
-          <div className="text-lg font-medium border-b-2 h-12 border-gray-300 ">
+        <div className="p-1 px-3">
+          <div className="text-lg font-medium border-b-2 h-12 border-gray-300 hover:border-custom-default hover:drop-shadow-xs transition-all duration-5000 flex items-center">
             {title}
           </div>
-          <div className="text-md h-48 overflow-y-auto">
-            {content}
-          </div>
+          <div className="text-md h-48 overflow-y-auto">{content}</div>
 
           <div className="flex justify-between ">
             <div className="">
               <button
-                className="bg-pink-100 rounded-full h-4 px-2 text-sm drop-shadow-md m-1"
+                className="bg-pink-200 rounded-full h-4 px-2 text-sm drop-shadow-md m-1"
                 onClick={() => setColor("bg-pink-200")}
               ></button>
               <button
-                className="bg-purple-200 rounded-full h-4 px-2 text-sm drop-shadow-md m-1"
-                onClick={() => setColor("bg-purple-200")}
+                className="bg-purple-300 rounded-full h-4 px-2 text-sm drop-shadow-md m-1"
+                onClick={() => setColor("bg-purple-300")}
               ></button>
               <button
                 className="bg-blue-200 rounded-full h-4 px-2 text-sm drop-shadow-md m-1"
@@ -66,7 +66,10 @@ export function Card({ _id, title, content, onDelete }: CardProps) {
                 onClick={() => setColor("bg-yellow-200")}
               ></button>
             </div>
-            <button className="mr-2 text-gray-500 hover:text-red-800" onClick={handleDelete}>
+            <button
+              className="mr-2 text-gray-500 hover:text-red-800"
+              onClick={handleDelete}
+            >
               <TrashIcon />
             </button>
           </div>

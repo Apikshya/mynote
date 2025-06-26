@@ -23,7 +23,7 @@ export function Notes() {
   if (currentHour >= 5 && currentHour < 12) {
     greeting = "Good Morning !";
   } else if (currentHour >= 12 && currentHour < 17) {
-    greeting = "Good Afternoon !";
+    greeting = "Good Afternoon !" ;
   } else if (currentHour >= 17 && currentHour < 21) {
     greeting = "Good Evening !";
   } else {
@@ -91,12 +91,15 @@ export function Notes() {
             <SearchIcon />
             <div className="ml-2">Search</div>
           </div>
-          <div className="text-gray-800 font-semibold text-lg mr-8 ">
+          <div className="flex">
+            <div className="text-gray-600 font-semibold text-md mr-24 ">
             {greeting}
           </div>
-          <div onClick={signout} className="cursor-pointer hover:text-blue-700">
-            <LogoutIcon />
+          <div onClick={signout} className="cursor-pointer hover:text-blue-800 flex">
+            Logout <LogoutIcon />
           </div>
+          </div>
+          
         </div>
         <div className="flex-1 ">
           {/* <div className="flex justify-end m-4">
