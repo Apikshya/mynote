@@ -37,7 +37,7 @@ export function Notes() {
   }
   return (
     <div className="h-screen w-screen flex transition-all duration-100">
-      <div className="w-52 h-screen bg-custom-morelight drop-shadow-lg hidden sm:block ">
+      <div className="w-52 h-screen bg-custom-morelight drop-shadow-lg  ">
         <div className="h-screen flex flex-col ">
           <div className="h-24 bg-red-2 cursor-pointer flex justify-center items-center text-3xl font-semibold font-inter text-black ">
             <Logo size="size-12" /> Mynote
